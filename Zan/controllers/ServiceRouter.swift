@@ -10,38 +10,52 @@ import Foundation
 import Alamofire
 
 enum ServiceRouter: URLRequestConvertible {
-    
-    case loadPosts
-    case searchUser(userId: Int)
-    case comments(postId: Int)
+	
+	case loadCategories
+	case loadVideo(userId:String, idiom:String, category:String)
+	case loadIdioms
+	case postVideo(userId:String, idiom:String, category:String, video:URL)
+	case rateVideo(userId:String, videoId:String, rate:String)
+	case registerUser(name:String, user:String, pass:String, idiom:String)
     
     var path: String {
         
         switch self {
-            
-        case .loadPosts:
-            return APIEndpoints.posts
-            
-        case .searchUser:
-            return APIEndpoints.users
-            
-        case .comments:
-            return APIEndpoints.comments
+		
+		case .loadCategories:
+			return APIEndpoints.loadCategories
+		
+        case .loadVideo:
+            return APIEndpoints.loadVideo
+			
+		case .loadIdioms:
+			return APIEndpoints.loadIdioms
+			
+		case .postVideo:
+			return APIEndpoints.postVideo
+		
+		case .rateVideo:
+			return APIEndpoints.rateVideo
+			
+		case .registerUser:
+			return APIEndpoints.registerUser
         }
     }
     
-    var parameters: [String: Any] {
-        
-        var params: [String: Any] = [:]
-        
+	var parameters: [String: Any] {
+		
+        let params: [String: Any] = [:]
+
         switch self {
-            
-        case let .searchUser(userId):
-            params["id"] = userId
-            
-        case let .comments(postId):
-            params["postId"] = postId
-            
+			
+		case let .loadVideo(userId, idiom, category):
+			return ["categoriaid": category, "idiomaid": idiom, "userid": userId]
+		case let .postVideo(userId, idiom, category, video):
+			return ["categoriaid": category, "idiomaid": idiom, "userid":userId , "video": video]
+		case let .rateVideo(userId, videoId, rate):
+			return ["userid": userId, "videoid": videoId, "avaliar": rate]
+		case let .registerUser(name, user, pass, idiom):
+			return ["u_nome": name, "u_user": user, "u_pass": pass, "u_idioma": idiom]
         default:
             break
         }
@@ -51,8 +65,11 @@ enum ServiceRouter: URLRequestConvertible {
     
     var method: HTTPMethod {
         switch self {
-        case  .loadPosts, .searchUser, .comments:
-            return .get
+			
+		case .loadCategories, .loadIdioms:
+			return .get
+		case .loadVideo, .postVideo, .rateVideo, .registerUser:
+			return .post
         }
     }
     
@@ -60,16 +77,26 @@ enum ServiceRouter: URLRequestConvertible {
         
         let url = try APIEndpoints.baseUrl.asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        
+		urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
+		
         urlRequest.httpMethod = method.rawValue
         urlRequest.timeoutInterval = 5.0
-        return try URLEncoding.methodDependent.encode(urlRequest, with: parameters)
+		
+		switch self {
+		case .loadCategories, .loadIdioms:
+			return try URLEncoding.methodDependent.encode(urlRequest, with: parameters)
+		default:
+			return try JSONEncoding.default.encode(urlRequest, with: parameters)
+		}
     }
 }
 
 struct APIEndpoints {
-    static let baseUrl = "http://zan.net.br/zam/vids.php"
-    static let users = "users"
-    static let comments = "comments"
-    static let posts = "posts"
+    static let baseUrl = "https://zan.net.br/zam/"
+    static let loadVideo = "receberj.php"
+	static let loadCategories = "api/catsj.php"
+	static let loadIdioms = "api/idiomasj.php"
+	static let postVideo = "upload.php"
+	static let rateVideo = "avaliarj.php"
+	static let registerUser = "adduserj.php"
 }

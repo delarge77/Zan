@@ -7,14 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A13D143FFB72DDE586A8F04 /* Pods_Zan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB22F801078315D74BD8231 /* Pods_Zan.framework */; };
+		6A282475216E0A4C00DD782C /* SendVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A282474216E0A4C00DD782C /* SendVideoViewController.swift */; };
+		6A282477216E3B7E00DD782C /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A282476216E3B7E00DD782C /* PlayVideoViewController.swift */; };
+		6A4AAE182164D7F700918CA0 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AAE172164D7F700918CA0 /* CategoriesViewController.swift */; };
+		6A4AAE1C2164EBEC00918CA0 /* Idiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AAE1B2164EBEC00918CA0 /* Idiom.swift */; };
+		6A4AAE1E21665A3800918CA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AAE1D21665A3800918CA0 /* User.swift */; };
+		6A4AAE20216DFE8000918CA0 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AAE1F216DFE8000918CA0 /* RecordVideoViewController.swift */; };
+		6A4AAE23216E033800918CA0 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AAE22216E033800918CA0 /* VideoHelper.swift */; };
+		6AEFAB37215BB44C00498C46 /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFAB36215BB44C00498C46 /* Categorie.swift */; };
+		6AEFAB3E215E29B000498C46 /* DataRequest+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFAB3D215E29B000498C46 /* DataRequest+Request.swift */; };
+		6AEFAB40215E2CF400498C46 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFAB3F215E2CF400498C46 /* ConnectionController.swift */; };
+		6AEFAB42215E2D2D00498C46 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFAB41215E2D2D00498C46 /* Video.swift */; };
 		874452982147100200DFB105 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874452972147100200DFB105 /* AppDelegate.swift */; };
 		8744529A2147100200DFB105 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874452992147100200DFB105 /* ViewController.swift */; };
 		8744529D2147100200DFB105 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8744529B2147100200DFB105 /* Main.storyboard */; };
 		8744529F2147100500DFB105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8744529E2147100500DFB105 /* Assets.xcassets */; };
 		874452A22147100500DFB105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874452A02147100500DFB105 /* LaunchScreen.storyboard */; };
+		874452AB2147114600DFB105 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874452AA2147114600DFB105 /* ServiceRouter.swift */; };
+		874452AD214711D400DFB105 /* ZanServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874452AC214711D400DFB105 /* ZanServiceAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CAD63EC150075B123358824 /* Pods-Zan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zan/Pods-Zan.release.xcconfig"; sourceTree = "<group>"; };
+		4B0F436991A54D9014309AB3 /* Pods-Zan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zan/Pods-Zan.debug.xcconfig"; sourceTree = "<group>"; };
+		6A282474216E0A4C00DD782C /* SendVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVideoViewController.swift; sourceTree = "<group>"; };
+		6A282476216E3B7E00DD782C /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		6A4AAE172164D7F700918CA0 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		6A4AAE1B2164EBEC00918CA0 /* Idiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idiom.swift; sourceTree = "<group>"; };
+		6A4AAE1D21665A3800918CA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6A4AAE1F216DFE8000918CA0 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		6A4AAE22216E033800918CA0 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		6AEFAB36215BB44C00498C46 /* Categorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Categorie.swift; path = Zan/models/Categorie.swift; sourceTree = SOURCE_ROOT; };
+		6AEFAB3D215E29B000498C46 /* DataRequest+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Request.swift"; sourceTree = "<group>"; };
+		6AEFAB3F215E2CF400498C46 /* ConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
+		6AEFAB41215E2D2D00498C46 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		874452942147100200DFB105 /* Zan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		874452972147100200DFB105 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		874452992147100200DFB105 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +49,9 @@
 		8744529E2147100500DFB105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		874452A12147100500DFB105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		874452A32147100500DFB105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		874452AA2147114600DFB105 /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
+		874452AC214711D400DFB105 /* ZanServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZanServiceAPI.swift; sourceTree = "<group>"; };
+		DAB22F801078315D74BD8231 /* Pods_Zan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +59,102 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A13D143FFB72DDE586A8F04 /* Pods_Zan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05BD6A5B4F7E33F81A4DC1AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAB22F801078315D74BD8231 /* Pods_Zan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1896F0E849C12639713409D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B0F436991A54D9014309AB3 /* Pods-Zan.debug.xcconfig */,
+				1CAD63EC150075B123358824 /* Pods-Zan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A4AAE21216E031900918CA0 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6A4AAE22216E033800918CA0 /* VideoHelper.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		6AEFAB35215BB40700498C46 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6AEFAB36215BB44C00498C46 /* Categorie.swift */,
+				6AEFAB41215E2D2D00498C46 /* Video.swift */,
+				6A4AAE1B2164EBEC00918CA0 /* Idiom.swift */,
+				6A4AAE1D21665A3800918CA0 /* User.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		6AEFAB38215E294E00498C46 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				874452972147100200DFB105 /* AppDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		6AEFAB39215E295F00498C46 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				874452992147100200DFB105 /* ViewController.swift */,
+				6A4AAE172164D7F700918CA0 /* CategoriesViewController.swift */,
+				6A4AAE1F216DFE8000918CA0 /* RecordVideoViewController.swift */,
+				6A282474216E0A4C00DD782C /* SendVideoViewController.swift */,
+				6A282476216E3B7E00DD782C /* PlayVideoViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		6AEFAB3A215E296D00498C46 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				8744529B2147100200DFB105 /* Main.storyboard */,
+				874452A02147100500DFB105 /* LaunchScreen.storyboard */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		6AEFAB3B215E297D00498C46 /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				8744529E2147100500DFB105 /* Assets.xcassets */,
+				874452A32147100500DFB105 /* Info.plist */,
+			);
+			path = "supporting files";
+			sourceTree = "<group>";
+		};
+		6AEFAB3C215E299400498C46 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6AEFAB3D215E29B000498C46 /* DataRequest+Request.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		8744528B2147100200DFB105 = {
 			isa = PBXGroup;
 			children = (
 				874452962147100200DFB105 /* Zan */,
 				874452952147100200DFB105 /* Products */,
+				1896F0E849C12639713409D6 /* Pods */,
+				05BD6A5B4F7E33F81A4DC1AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +169,26 @@
 		874452962147100200DFB105 /* Zan */ = {
 			isa = PBXGroup;
 			children = (
-				874452972147100200DFB105 /* AppDelegate.swift */,
-				874452992147100200DFB105 /* ViewController.swift */,
-				8744529B2147100200DFB105 /* Main.storyboard */,
-				8744529E2147100500DFB105 /* Assets.xcassets */,
-				874452A02147100500DFB105 /* LaunchScreen.storyboard */,
-				874452A32147100500DFB105 /* Info.plist */,
+				6A4AAE21216E031900918CA0 /* helpers */,
+				6AEFAB3C215E299400498C46 /* extensions */,
+				6AEFAB35215BB40700498C46 /* models */,
+				874452A92147102A00DFB105 /* controllers */,
+				6AEFAB38215E294E00498C46 /* application */,
+				6AEFAB39215E295F00498C46 /* viewcontrollers */,
+				6AEFAB3A215E296D00498C46 /* interface */,
+				6AEFAB3B215E297D00498C46 /* supporting files */,
 			);
 			path = Zan;
+			sourceTree = "<group>";
+		};
+		874452A92147102A00DFB105 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				874452AA2147114600DFB105 /* ServiceRouter.swift */,
+				874452AC214711D400DFB105 /* ZanServiceAPI.swift */,
+				6AEFAB3F215E2CF400498C46 /* ConnectionController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 874452A62147100500DFB105 /* Build configuration list for PBXNativeTarget "Zan" */;
 			buildPhases = (
+				8178D4A31267A40DBE41C701 /* [CP] Check Pods Manifest.lock */,
 				874452902147100200DFB105 /* Sources */,
 				874452912147100200DFB105 /* Frameworks */,
 				874452922147100200DFB105 /* Resources */,
+				3D475CB3A5E1AE8A3FABC109 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +259,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D475CB3A5E1AE8A3FABC109 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Zan/Pods-Zan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zan/Pods-Zan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8178D4A31267A40DBE41C701 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		874452902147100200DFB105 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8744529A2147100200DFB105 /* ViewController.swift in Sources */,
+				6AEFAB3E215E29B000498C46 /* DataRequest+Request.swift in Sources */,
+				6A4AAE1C2164EBEC00918CA0 /* Idiom.swift in Sources */,
+				6A4AAE20216DFE8000918CA0 /* RecordVideoViewController.swift in Sources */,
+				6A4AAE182164D7F700918CA0 /* CategoriesViewController.swift in Sources */,
+				6AEFAB37215BB44C00498C46 /* Categorie.swift in Sources */,
+				6A282475216E0A4C00DD782C /* SendVideoViewController.swift in Sources */,
+				874452AB2147114600DFB105 /* ServiceRouter.swift in Sources */,
+				6A282477216E3B7E00DD782C /* PlayVideoViewController.swift in Sources */,
+				874452AD214711D400DFB105 /* ZanServiceAPI.swift in Sources */,
+				6AEFAB42215E2D2D00498C46 /* Video.swift in Sources */,
 				874452982147100200DFB105 /* AppDelegate.swift in Sources */,
+				6AEFAB40215E2CF400498C46 /* ConnectionController.swift in Sources */,
+				6A4AAE23216E033800918CA0 /* VideoHelper.swift in Sources */,
+				6A4AAE1E21665A3800918CA0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -278,10 +459,12 @@
 		};
 		874452A72147100500DFB105 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B0F436991A54D9014309AB3 /* Pods-Zan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Zan/Info.plist;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = "$(SRCROOT)/Zan/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,10 +478,12 @@
 		};
 		874452A82147100500DFB105 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CAD63EC150075B123358824 /* Pods-Zan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Zan/Info.plist;
+				DEVELOPMENT_TEAM = LZASXEKJ7F;
+				INFOPLIST_FILE = "$(SRCROOT)/Zan/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

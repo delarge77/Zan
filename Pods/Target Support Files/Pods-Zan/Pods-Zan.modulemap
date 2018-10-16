@@ -1,0 +1,6 @@
+framework module Pods_Zan {
+  umbrella header "Pods-Zan-umbrella.h"
+
+  export *
+  module * { export * }
+}

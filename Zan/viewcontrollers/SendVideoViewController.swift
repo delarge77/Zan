@@ -7,29 +7,45 @@
 //
 
 import UIKit
+import AVKit
+import MobileCoreServices
 
 class SendVideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+	
+	@IBAction func playVideo(_ sender: AnyObject) {
+		VideoHelper.startMediaBrowser(delegate: self, sourceType: .savedPhotosAlbum)
+	}
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+// MARK: - UIImagePickerControllerDelegate
 
-    /*
-    // MARK: - Navigation
+extension SendVideoViewController: UIImagePickerControllerDelegate {
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+		
+		guard let mediaType = info[UIImagePickerControllerMediaType] as? String,
+			mediaType == (kUTTypeMovie as String),
+			let url = info[UIImagePickerControllerMediaURL] as? URL
+			else { return }
+		
+		let api = ConnectionController()
+		do {
+			let video = try Data(contentsOf: url)
+			api.postVideo(video: video) { (posted) in
+				print("\(posted)")
+			}
+		} catch (let error) {
+			print("\(error)")
+		}
+		
+		dismiss(animated: true, completion: nil)
+	}
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+// MARK: - UINavigationControllerDelegate
 
+extension SendVideoViewController: UINavigationControllerDelegate {
 }

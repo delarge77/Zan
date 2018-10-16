@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Idiom: Codable {
+	let id: String
+	let idioma: String
+	let sit: String
+}
