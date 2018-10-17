@@ -15,7 +15,7 @@ class PlayVideoViewController: UIViewController {
         super.viewDidLoad()
 
 		let api = ConnectionController()
-		api.loadVideoWith(category: "1") { [weak self](video) in
+		api.loadVideoWith(category: "3") { [weak self] (video) in
 			let v = video[0]
 			self?.playVideoFrom(url: v.URL)
 		}

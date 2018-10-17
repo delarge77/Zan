@@ -47,11 +47,16 @@ struct ConnectionController: Connection {
 //			completion(video)
 //		}
 		
-		let params = ["userId": "1", "idiom": "1", "category": "1", "video": video] as [String : Any]
-		service.sendVideo(url: video, params: params) { (msg) in
-			
+		service.postVideo(url: video, video: ServiceRouter.postVideo(userId: "10", idiom: "1", category: "1")) { (msg) in
+			completion(msg)
 		}
+		
+//		let params = ["userId": "1", "idiom": "1", "category": "1", "video": video] as [String : Any]
+//		service.sendVideo(url: video, params: params) { (msg) in
+//
+//		}
 	}
+
 	
 	func rateVideoWith(rate: String, completion: @escaping ((String) -> Void)) {
 		service.rateVideo(ServiceRouter.rateVideo(userId: "1", videoId: "1", rate: rate)) { (message) in

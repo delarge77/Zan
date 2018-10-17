@@ -71,45 +71,21 @@ extension ZanServiceAPI {
 		}
 	}
 	
-//	func postVideo(_ video: URLRequestConvertible, completion:@escaping(Bool) -> Void){
-//
-//	}
+	func postVideo(videoData: Data, video: URLRequestConvertible, completion:@escaping(Bool) -> Void){
+		Alamofire.upload(videoData, with: video).uploadProgress { (progress) in
+			print("Upload Progress: \(progress.fractionCompleted)")
+		}
+			.responseJSON { (response) in
+			debugPrint(response)
+		}
+	}
 	
 	func sendVideo(url: Data, params:[String:Any], completion:@escaping(Bool) -> Void) {
-//		Alamofire.upload( multipartFormData: { multipartFormData in
-//			multipartFormData.append(url, withName: "video", fileName: "video.mp4", mimeType: "video/mp4")
-//		}, to: url, encodingCompletion: { encodingResult in
-//			switch encodingResult {
-//			case .success(let upload, _, _):
-//				upload.responseJSON { response in
-//					if let JSON = response.result.value as? NSDictionary {
-//						print("\(JSON)")
-//						completion(true)
-//					} else {
-//						completion(false)
-//						print(response)
-//					}
-//				}
-//			case .failure(let encodingError):
-//				print(encodingError)
-//				completion(false)
-//			}
-//		})
-		
 		let headers: HTTPHeaders = [
-			/* "Authorization": "your_access_token",  in case you need authorization header */
-//			"Content-type": "multipart/form-data"
 			"application/json":"Accept"
 		]
-		
 		Alamofire.upload(multipartFormData: { (multipartFormData) in
-//			for (key, value) in params {
-//				multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
-//			}
-			
-			
-			multipartFormData.append(url, withName: "video", fileName: "video.mp4", mimeType: "video/mp4")
-			
+			multipartFormData.append(url, withName: "", fileName: "video.mp4", mimeType: "video/mp4")
 		}, usingThreshold: UInt64.init(), to: URL(string: "https://zan.net.br/zam/upload.php")!, method: .post, headers: headers) { (multipartFormData) in
 			switch multipartFormData {
 			case .success(let upload, _, _):
@@ -125,7 +101,6 @@ extension ZanServiceAPI {
 			case .failure(let encodingError):
 				print(encodingError)
 				completion(false)
-
 			}
 		}
 	}

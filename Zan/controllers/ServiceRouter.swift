@@ -14,7 +14,7 @@ enum ServiceRouter: URLRequestConvertible {
 	case loadCategories
 	case loadVideo(userId:String, idiom:String, category:String)
 	case loadIdioms
-	case postVideo(userId:String, idiom:String, category:String, video:URL)
+	case postVideo(userId:String, idiom:String, category:String)
 	case rateVideo(userId:String, videoId:String, rate:String)
 	case registerUser(name:String, user:String, pass:String, idiom:String)
     
@@ -50,8 +50,8 @@ enum ServiceRouter: URLRequestConvertible {
 			
 		case let .loadVideo(userId, idiom, category):
 			return ["categoriaid": category, "idiomaid": idiom, "userid": userId]
-		case let .postVideo(userId, idiom, category, video):
-			return ["categoriaid": category, "idiomaid": idiom, "userid":userId , "video": video]
+		case let .postVideo(userId, idiom, category):
+			return ["categoriaid": category, "idiomaid": idiom, "userid":userId]
 		case let .rateVideo(userId, videoId, rate):
 			return ["userid": userId, "videoid": videoId, "avaliar": rate]
 		case let .registerUser(name, user, pass, idiom):
@@ -80,7 +80,7 @@ enum ServiceRouter: URLRequestConvertible {
 		urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
 		
         urlRequest.httpMethod = method.rawValue
-        urlRequest.timeoutInterval = 5.0
+        urlRequest.timeoutInterval = 60.0
 		
 		switch self {
 		case .loadCategories, .loadIdioms:
