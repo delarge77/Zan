@@ -80,26 +80,37 @@ extension ZanServiceAPI {
 		}
 	}
 	
-	func sendVideo(url: Data, params:[String:Any], completion:@escaping(Bool) -> Void) {
+	func sendVideo(_ video: Data, params:[String:String], completion:@escaping(Bool) -> Void) {
 		let headers: HTTPHeaders = [
-			"application/json":"Accept"
+			"application/json":"Accept",
+//            "Content-Type":"text/html; charset=UTF-8"
 		]
 		Alamofire.upload(multipartFormData: { (multipartFormData) in
-			multipartFormData.append(url, withName: "", fileName: "video.mp4", mimeType: "video/mp4")
-		}, usingThreshold: UInt64.init(), to: URL(string: "https://zan.net.br/zam/upload.php")!, method: .post, headers: headers) { (multipartFormData) in
+            
+//            multipartFormData.append(url, withName: "video")//, fileName: "video.mp4", mimeType: "video/mp4")
+            multipartFormData.append(video, withName: "video")
+            
+            for (key, value) in params {
+                multipartFormData.append(Data(value.utf8), withName: key)
+            }
+            
+		}, usingThreshold: UInt64.init(), to: URL(string: "https://zan.net.br/zam/uploadj.php")!, method: .post, headers: headers) { (multipartFormData) in
 			switch multipartFormData {
 			case .success(let upload, _, _):
-				upload.responseJSON { response in
-					if let JSON = response.result.value as? NSDictionary {
-						print("\(JSON)")
-						completion(true)
-					} else {
-						completion(false)
-						print(response)
-					}
-				}
+//                upload.responseJSON { response in
+//                    if let JSON = response.result.value as? NSDictionary {
+//                        debugPrint("\(JSON)")
+//                        completion(true)
+//                    } else {
+//                        completion(false)
+//                        debugPrint(response)
+//                    }
+//                }
+                upload.responseString(completionHandler: { (msg) in
+                    debugPrint(msg)
+                })
 			case .failure(let encodingError):
-				print(encodingError)
+				debugPrint(encodingError)
 				completion(false)
 			}
 		}

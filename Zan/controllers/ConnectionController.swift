@@ -47,14 +47,14 @@ struct ConnectionController: Connection {
 //			completion(video)
 //		}
 		
-		service.postVideo(url: video, video: ServiceRouter.postVideo(userId: "10", idiom: "1", category: "1")) { (msg) in
-			completion(msg)
-		}
+//        service.postVideo(videoData: video, video: ServiceRouter.postVideo(userId: "10", idiom: "1", category: "1")) { (msg) in
+//            completion(msg)
+//        }
 		
-//		let params = ["userId": "1", "idiom": "1", "category": "1", "video": video] as [String : Any]
-//		service.sendVideo(url: video, params: params) { (msg) in
-//
-//		}
+        let params = ["userid": "10", "idiomaid": "1", "categoriaid": "1"] as [String : String]
+        service.sendVideo(video, params: params) { (msg) in
+
+        }
 	}
 
 	
