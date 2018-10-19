@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="TRJ-sf-OE5">
+            <objects>
+                <viewController id="x2f-K9-bpO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIe-fy-lSz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-mW-wnd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="451.5"/>
+                                <connections>
+                                    <segue destination="107-63-Ox0" kind="embed" id="Wkd-z9-Hoi"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8r1-1U-vPq">
+                                <rect key="frame" x="0.0" y="451.5" width="375" height="215.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YpO-9V-NAn">
+                                        <rect key="frame" x="92.5" y="33" width="190" height="149"/>
+                                        <subviews>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ltz-aD-tat">
+                                                <rect key="frame" x="75.5" y="0.0" width="39" height="37"/>
+                                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </pageControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bI-UF-NgB">
+                                                <rect key="frame" x="0.0" y="53" width="190" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9TW-TP-ccr"/>
+                                                    <constraint firstAttribute="width" constant="190" id="c6D-Hd-hWl"/>
+                                                </constraints>
+                                                <state key="normal" title="Next"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIH-HM-XfD">
+                                                <rect key="frame" x="80" y="119" width="30" height="30"/>
+                                                <state key="normal" title="Skip"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YpO-9V-NAn" firstAttribute="centerX" secondItem="8r1-1U-vPq" secondAttribute="centerX" id="oeL-eu-m76"/>
+                                    <constraint firstItem="YpO-9V-NAn" firstAttribute="centerY" secondItem="8r1-1U-vPq" secondAttribute="centerY" id="uiq-x5-KGQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aI7-mW-wnd" firstAttribute="leading" secondItem="cRm-bA-UTy" secondAttribute="leading" id="1Va-tm-xi7"/>
+                            <constraint firstItem="8r1-1U-vPq" firstAttribute="height" secondItem="cRm-bA-UTy" secondAttribute="height" multiplier="1:3" id="8HC-aj-Q7h"/>
+                            <constraint firstItem="aI7-mW-wnd" firstAttribute="top" secondItem="nIe-fy-lSz" secondAttribute="top" id="9nm-Ga-C6Y"/>
+                            <constraint firstItem="aI7-mW-wnd" firstAttribute="trailing" secondItem="cRm-bA-UTy" secondAttribute="trailing" id="CV1-2p-VG9"/>
+                            <constraint firstItem="8r1-1U-vPq" firstAttribute="trailing" secondItem="cRm-bA-UTy" secondAttribute="trailing" id="I6E-Uf-c6E"/>
+                            <constraint firstItem="8r1-1U-vPq" firstAttribute="top" secondItem="aI7-mW-wnd" secondAttribute="bottom" id="J1f-Li-w0s"/>
+                            <constraint firstItem="8r1-1U-vPq" firstAttribute="leading" secondItem="cRm-bA-UTy" secondAttribute="leading" id="iln-fR-fc2"/>
+                            <constraint firstItem="8r1-1U-vPq" firstAttribute="bottom" secondItem="cRm-bA-UTy" secondAttribute="bottom" id="rXj-8M-Yic"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cRm-bA-UTy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVQ-Yz-UZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="71.514242878560722"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="V2w-I0-2cj">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughContentViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="107-63-Ox0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-8V-egP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78" y="71"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="MYB-mI-sTw">
+            <objects>
+                <viewController id="dkJ-0q-CgH" customClass="WalkthroughContentViewController" customModule="Zan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mvb-YX-RLu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ykk-g5-8RT">
+                                <rect key="frame" x="24" y="36" width="327" height="229"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtW-lF-zQZ">
+                                <rect key="frame" x="96" y="306" width="182" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="u7x-eJ-Slk"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="451"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8H-fT-nQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581.60000000000002" y="70.614692653673174"/>
+        </scene>
+    </scenes>
+</document>

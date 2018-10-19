@@ -18,6 +18,9 @@
 		6A61689A21787E3100F3276B /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61689921787E3100F3276B /* LoginScreenViewController.swift */; };
 		6A61689C21787E4D00F3276B /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61689B21787E4D00F3276B /* SignUpScreenViewController.swift */; };
 		6A6168A0217891F300F3276B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61689F217891F300F3276B /* CategoryCell.swift */; };
+		6A6168A22179D07200F3276B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6168A12179D07200F3276B /* Onboarding.storyboard */; };
+		6A6168A42179E44900F3276B /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6168A32179E44900F3276B /* WalkthroughContentViewController.swift */; };
+		6A6168A6217A18E400F3276B /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6168A5217A18E400F3276B /* WalkthroughViewController.swift */; };
 		6AEFAB37215BB44C00498C46 /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFAB36215BB44C00498C46 /* Categorie.swift */; };
 		6AEFAB3E215E29B000498C46 /* DataRequest+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFAB3D215E29B000498C46 /* DataRequest+Request.swift */; };
 		6AEFAB40215E2CF400498C46 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFAB3F215E2CF400498C46 /* ConnectionController.swift */; };
@@ -44,6 +47,9 @@
 		6A61689921787E3100F3276B /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		6A61689B21787E4D00F3276B /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		6A61689F217891F300F3276B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		6A6168A12179D07200F3276B /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		6A6168A32179E44900F3276B /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		6A6168A5217A18E400F3276B /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		6AEFAB36215BB44C00498C46 /* Categorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Categorie.swift; path = Zan/models/Categorie.swift; sourceTree = SOURCE_ROOT; };
 		6AEFAB3D215E29B000498C46 /* DataRequest+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Request.swift"; sourceTree = "<group>"; };
 		6AEFAB3F215E2CF400498C46 /* ConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 				6A282476216E3B7E00DD782C /* PlayVideoViewController.swift */,
 				6A61689921787E3100F3276B /* LoginScreenViewController.swift */,
 				6A61689B21787E4D00F3276B /* SignUpScreenViewController.swift */,
+				6A6168A32179E44900F3276B /* WalkthroughContentViewController.swift */,
+				6A6168A5217A18E400F3276B /* WalkthroughViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			children = (
 				8744529B2147100200DFB105 /* Main.storyboard */,
 				874452A02147100500DFB105 /* LaunchScreen.storyboard */,
+				6A6168A12179D07200F3276B /* Onboarding.storyboard */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				874452A22147100500DFB105 /* LaunchScreen.storyboard in Resources */,
 				8744529F2147100500DFB105 /* Assets.xcassets in Resources */,
 				8744529D2147100200DFB105 /* Main.storyboard in Resources */,
+				6A6168A22179D07200F3276B /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,9 +347,11 @@
 				6A4AAE20216DFE8000918CA0 /* RecordVideoViewController.swift in Sources */,
 				6A4AAE182164D7F700918CA0 /* CategoriesViewController.swift in Sources */,
 				6AEFAB37215BB44C00498C46 /* Categorie.swift in Sources */,
+				6A6168A6217A18E400F3276B /* WalkthroughViewController.swift in Sources */,
 				6A282475216E0A4C00DD782C /* SendVideoViewController.swift in Sources */,
 				874452AB2147114600DFB105 /* ServiceRouter.swift in Sources */,
 				6A282477216E3B7E00DD782C /* PlayVideoViewController.swift in Sources */,
+				6A6168A42179E44900F3276B /* WalkthroughContentViewController.swift in Sources */,
 				874452AD214711D400DFB105 /* ZanServiceAPI.swift in Sources */,
 				6AEFAB42215E2D2D00498C46 /* Video.swift in Sources */,
 				874452982147100200DFB105 /* AppDelegate.swift in Sources */,
