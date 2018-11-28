@@ -32,6 +32,8 @@
 		874452A22147100500DFB105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874452A02147100500DFB105 /* LaunchScreen.storyboard */; };
 		874452AB2147114600DFB105 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874452AA2147114600DFB105 /* ServiceRouter.swift */; };
 		874452AD214711D400DFB105 /* ZanServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874452AC214711D400DFB105 /* ZanServiceAPI.swift */; };
+		87D2087D219CA3E800CF7DB1 /* SendAndReceiveVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D2087C219CA3E700CF7DB1 /* SendAndReceiveVideoViewController.swift */; };
+		87F7D3DE21AF0FCE00E5A81F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7D3DD21AF0FCE00E5A81F /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		874452A32147100500DFB105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		874452AA2147114600DFB105 /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
 		874452AC214711D400DFB105 /* ZanServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZanServiceAPI.swift; sourceTree = "<group>"; };
+		87D2087C219CA3E700CF7DB1 /* SendAndReceiveVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAndReceiveVideoViewController.swift; sourceTree = "<group>"; };
+		87F7D3DD21AF0FCE00E5A81F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DAB22F801078315D74BD8231 /* Pods_Zan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +154,8 @@
 				6A61689B21787E4D00F3276B /* SignUpScreenViewController.swift */,
 				6A6168A32179E44900F3276B /* WalkthroughContentViewController.swift */,
 				6A6168A5217A18E400F3276B /* WalkthroughViewController.swift */,
+				87D2087C219CA3E700CF7DB1 /* SendAndReceiveVideoViewController.swift */,
+				87F7D3DD21AF0FCE00E5A81F /* MenuViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -303,10 +309,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Zan/Pods-Zan-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,9 +357,11 @@
 				6AEFAB37215BB44C00498C46 /* Categorie.swift in Sources */,
 				6A6168A6217A18E400F3276B /* WalkthroughViewController.swift in Sources */,
 				6A282475216E0A4C00DD782C /* SendVideoViewController.swift in Sources */,
+				87D2087D219CA3E800CF7DB1 /* SendAndReceiveVideoViewController.swift in Sources */,
 				874452AB2147114600DFB105 /* ServiceRouter.swift in Sources */,
 				6A282477216E3B7E00DD782C /* PlayVideoViewController.swift in Sources */,
 				6A6168A42179E44900F3276B /* WalkthroughContentViewController.swift in Sources */,
+				87F7D3DE21AF0FCE00E5A81F /* MenuViewController.swift in Sources */,
 				874452AD214711D400DFB105 /* ZanServiceAPI.swift in Sources */,
 				6AEFAB42215E2D2D00498C46 /* Video.swift in Sources */,
 				874452982147100200DFB105 /* AppDelegate.swift in Sources */,
