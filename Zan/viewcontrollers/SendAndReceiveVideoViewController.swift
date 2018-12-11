@@ -11,14 +11,19 @@ import UIKit
 class SendAndReceiveVideoViewController: UIViewController {
 
     var categorie: String?
+    @IBOutlet weak var categoryImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         guard let categorie = categorie else { return }
         
-        print("\(categorie)")
+        categoryImageView.image = UIImage(named: "\(categorie).png")
+        
     }
     
+    @IBAction func back(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }

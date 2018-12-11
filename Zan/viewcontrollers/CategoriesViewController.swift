@@ -51,36 +51,31 @@ class CategoriesViewController: UIViewController {
         
         switch sender.tag {
         case 0:
-            categorie = "LOVE"
+            categorie = "SAUDE"
             
         case 1:
-            categorie = "SMOKE"
+            categorie = "FUMAR"
             
         case 2:
-            categorie = "GYM"
+            categorie = "ACADEMIA"
             
         case 3:
-            categorie = "DRUGS"
+            categorie = "DROGAS"
             
         case 4:
-            categorie = "HEALTH"
+            categorie = "BOMDIA"
             
         case 5:
-            categorie = "DRINK"
+            categorie = "ALCOHOOL"
             
         default:
             categorie = "UNKNOWN"
         }
         
-        performSegue(withIdentifier: "videos", sender: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "send") as! SendAndReceiveVideoViewController
+        vc.categorie = categorie
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      //  if segue.identifier == "videos" {
-        //    let destination = segue.destination as! SendAndReceiveVideoViewController
-          //  destination.categorie = categorie
-        //}
-    //}
     
     @IBAction func showMenu(_ sender: Any) {
         present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
